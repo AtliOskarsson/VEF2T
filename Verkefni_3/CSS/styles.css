@@ -1,4 +1,10 @@
 body{
 	color:red;
 	background-color: black;
+	text-align: center;
 }
+
+img{
+	width: 50em;
+}
+
