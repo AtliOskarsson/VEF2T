@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>PIZZA!</title>
+	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 </head>
 <body>
 

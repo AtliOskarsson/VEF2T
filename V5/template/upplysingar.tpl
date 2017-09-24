@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Information</title>
+	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 </head>
 <body>
 	<h1>Upplýsingar</h1>
