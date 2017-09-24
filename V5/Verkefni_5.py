@@ -8,7 +8,21 @@ def yeh():
     return template("template/index.tpl")
 @route("/send", method="POST")
 def senda():
-    steard = request.forms.get("steard")
-    return steard
+    upplysingar = {}
+    pizzu_listi = {"9-tommu": 1000, "12-tommu": 1500, "15-tommu": 2000, "skinka": 200, "ananas": 200, "pepperoni": 200}
+    nafn = request.forms.get("nafn")
+    heimilisfang = request.forms.get("heimilisfang")
+    netfang = request.forms.get("email")
+    simanumer = request.forms.get("simanumer")
+    staerd = request.forms.get("staerd")
+    alegg = request.forms.get("alegg")
+    utkoma = pizzu_listi.get(staerd) + pizzu_listi.get(alegg)
+    upplysingar.update({"nafn": nafn, "heimilisfang": heimilisfang, "netfang": netfang, "simanumer": simanumer, "staerd": staerd, "alegg": alegg, "utkoma": utkoma, "verd_staerd": pizzu_listi.get(staerd), "verd_alegg": pizzu_listi.get(alegg)})
+
+    return template("template/upplysingar.tpl", upplysingar)
+
+@route('/CSS/<filename>')
+def server_static(filename):
+    return static_file(filename, root="CSS")
 
 run(host="localhost", port="8080", debug=True)
