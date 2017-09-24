@@ -15,5 +15,6 @@
 	<p>Stærð: {{ staerd }} Verð: {{ verd_staerd }}</p>
 	<p>Álegg: {{ alegg }} Verð: {{ verd_alegg }}</p>
 	<p>Samtals: {{ utkoma }}</p>
+	<p>Heildarverð með Virðisaukaskattur: {{ virdisaukaskattur }}</p>
 </body>
 </html>	

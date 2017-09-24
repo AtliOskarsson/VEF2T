@@ -17,7 +17,9 @@ def senda():
     staerd = request.forms.get("staerd")
     alegg = request.forms.get("alegg")
     utkoma = pizzu_listi.get(staerd) + pizzu_listi.get(alegg)
-    upplysingar.update({"nafn": nafn, "heimilisfang": heimilisfang, "netfang": netfang, "simanumer": simanumer, "staerd": staerd, "alegg": alegg, "utkoma": utkoma, "verd_staerd": pizzu_listi.get(staerd), "verd_alegg": pizzu_listi.get(alegg)})
+    virdiskattur = utkoma * 1.25
+    virdiskattur = str(virdiskattur)
+    upplysingar.update({"nafn": nafn, "heimilisfang": heimilisfang, "netfang": netfang, "simanumer": simanumer, "staerd": staerd, "alegg": alegg, "utkoma": utkoma, "verd_staerd": pizzu_listi.get(staerd), "verd_alegg": pizzu_listi.get(alegg), "virdisaukaskattur": virdiskattur})
 
     return template("template/upplysingar.tpl", upplysingar)
 
