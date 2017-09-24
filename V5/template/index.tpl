@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>PIZZA!</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
 </head>
 <body>
@@ -10,12 +11,12 @@
 	<h2>Notenda Upplýsingar</h2>
 		<label>Nafn:</label><br>
 		<input type="text" name="nafn" required=""><br>
-		<label>Heimilisfang:</label><br>
-		<input type="text" name="heimilisfang" title="Þarf að hafa einn tölustaf" required=""><br>
 		<label>Netfang:</label><br>
 		<input type="email" name="email" required=""><br>
 		<label>Símanúmer:</label><br>
-		<input type="number" name="simanumer" required="">
+		<input type="number" name="simanumer" required=""><br>
+		<label>Heimilisfang:</label><br>
+		<input type="text" name="heimilisfang" title="Þarf að hafa einn tölustaf" required="">
 
 	<h2>Pizzastærð</h2>
 		<input type="radio" name="staerd" value="9-tommu" checked>
