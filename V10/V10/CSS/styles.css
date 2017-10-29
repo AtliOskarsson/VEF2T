@@ -1,0 +1,14 @@
+body {
+	text-align: center;
+	background-color: black;
+	color: red;
+	font-size: 35px;
+}
+input {
+	text-align: center;
+	background-color: black;
+	color: red;
+	border-color: red;
+	font-size: 25px;
+	border-radius: 25px;
+}
