@@ -1,0 +1,35 @@
+from bottle import *
+from pymysql import *
+
+db=Connect(host="tsuts.tskoli.is", user="0202002190", password="H2csgo1500", db="0202002190_vef2verk11")
+cursor=db.cursor()
+cursor.execute("select * from bilar")
+numrows=int(cursor.rowcount)
+
+bilar_listi = []
+
+for i in range(numrows):
+    row=cursor.fetchone()
+    if row:
+        bilar = {}
+        bilar["skraningarnumer"] = row[0]
+        bilar["tegund"] = row[1]
+        bilar["verksmidjunumer"] = row[2]
+        bilar["skraningadagur"] = row[3]
+        bilar["co2"] = row[4]
+        bilar["þyngd"] = row[5]
+        bilar["skodun"] = row[6]
+        bilar["stada"] = row[7]
+        bilar_listi.append(bilar)
+
+for x in range(len(bilar_listi)):
+    for i in bilar_listi[x]:
+        print(i)
+
+@route("/")
+def bilar():
+    return template("template/index.tpl", bilar_listi)
+
+
+
+run(host="localhost", port="8080", debug=True)
